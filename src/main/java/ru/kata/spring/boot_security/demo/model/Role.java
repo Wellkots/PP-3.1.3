@@ -7,14 +7,14 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "role1")
 public class Role implements GrantedAuthority {
     @Id
     private Long id;
     @Column(name = "name")
     private String name;
     @Transient
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "role1")
     private Set<User> users;
 
     public Role() {
